@@ -57,6 +57,8 @@ header,
   background-color: var(--clr-dark-blue);
   min-width: 325px;
   margin: 1.2em 0;
+  -webkit-box-shadow: 0.5em 0.5em 3em var(--clr-very-dark-blue);
+          box-shadow: 0.5em 0.5em 3em var(--clr-very-dark-blue);
 }
 
 header {
