@@ -173,11 +173,11 @@ header {
 
   .container {
     display: flex;
-    gap: 1em;
 
     header {
       min-width: max-content;
       flex-grow: 1;
+      margin-right: 1.8em;
     }
 
     .storage-summary {

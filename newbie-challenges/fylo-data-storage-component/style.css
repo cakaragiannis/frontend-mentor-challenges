@@ -178,7 +178,6 @@ header button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 1em;
   }
   .container header {
     min-width: -webkit-max-content;
@@ -187,6 +186,7 @@ header button {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+    margin-right: 1.8em;
   }
   .container .storage-summary {
     -webkit-box-flex: 2;
