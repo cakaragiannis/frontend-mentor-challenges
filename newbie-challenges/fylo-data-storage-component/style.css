@@ -195,7 +195,7 @@ header button {
     -ms-flex-item-align: end;
         align-self: flex-end;
     text-align: left;
-    padding: 2.5em;
+    padding: 3em;
   }
   .container .storage-left {
     left: calc(100% - 164px - 2.5em);
