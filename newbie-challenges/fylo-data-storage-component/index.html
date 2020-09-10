@@ -18,49 +18,58 @@
     <title>Frontend Mentor | Fylo data storage component</title>
   </head>
   <body class="flex flex-col">
-    <header>
-      <img
-        src="./images/logo.svg"
-        alt="Fylo logo"
-        aria-label="Fylo"
-        class="logo"
-      />
-      <button>
+    <div class="container">
+      <header>
         <img
-          src="./images/icon-document.svg"
-          alt="New document"
-          aria-label="New document"
+          src="./images/logo.svg"
+          alt="Fylo logo"
+          aria-label="Fylo"
+          class="logo"
         />
-      </button>
-      <button>
-        <img
-          src="./images/icon-folder.svg"
-          alt="New folder"
-          aria-label="New folder"
-        />
-      </button>
-      <button>
-        <img src="./images/icon-upload.svg" alt="Upload" aria-label="Upload" />
-      </button>
-    </header>
+        <button>
+          <img
+            src="./images/icon-document.svg"
+            alt="New document"
+            aria-label="New document"
+          />
+        </button>
+        <button>
+          <img
+            src="./images/icon-folder.svg"
+            alt="New folder"
+            aria-label="New folder"
+          />
+        </button>
+        <button>
+          <img
+            src="./images/icon-upload.svg"
+            alt="Upload"
+            aria-label="Upload"
+          />
+        </button>
+      </header>
 
-    <div class="storage-summary">
-      <label for="storage-indicator"
-        >You’ve used <strong>185 GB</strong> of your storage</label
-      >
-      <progress id="storage-indicator" value="815" max="1000">815 GB</progress>
-      <div class="indicator-labels flex">
-        <span>0 GB</span>
-        <span>1000 GB</span>
+      <div class="storage-summary">
+        <label for="storage-indicator"
+          >You’ve used <strong>185 GB</strong> of your storage</label
+        >
+        <progress id="storage-indicator" value="815" max="1000">
+          815 GB
+        </progress>
+        <div class="indicator-labels flex">
+          <span>0 GB</span>
+          <span>1000 GB</span>
+        </div>
+        <div class="storage-left flex"><span>185</span> GB LEFT</div>
       </div>
-      <div class="storage-left flex"><span>185</span> GB LEFT</div>
     </div>
-
+    <div class="spacer"></div>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="https://twitter.com/chrisandrew_dev">chrisandrew_dev</a>.
+      >. Coded by
+      <a href="https://twitter.com/chrisandrew_dev">chrisandrew_dev</a>.
     </div>
   </body>
 </html>

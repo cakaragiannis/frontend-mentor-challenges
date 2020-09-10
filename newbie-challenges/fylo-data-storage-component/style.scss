@@ -18,22 +18,41 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 14px;
   height: 100vh;
-  background: center / contain url("./images/bg-mobile.png") no-repeat;
+  background: center / cover url("./images/bg-mobile.png") no-repeat;
   margin: 0 auto;
   overflow: hidden;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+
+  &-col {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.spacer {
+  height: 40px;
+}
+
+.container {
+  min-width: 325px;
+  width: 80%;
+  max-width: 900px;
 }
 
 header,
 .storage-summary {
   background-color: var(--clr-dark-blue);
-  width: 80%;
   min-width: 325px;
-  margin: 0.5em;
+  margin: 1.2em 0;
 }
 
 header {
   border-radius: 0.8em 8em 0.8em 0.8em;
-  padding: 2.5em 3em;
+  padding: 3em;
 
   .logo {
     display: block;
@@ -67,12 +86,12 @@ header {
     background-color: var(--clr-desaturated-dark-blue);
     border: 3px solid var(--clr-desaturated-dark-blue);
     border-radius: 3em;
-    
+
     &[value]::-webkit-progress-bar {
       border-radius: 3em;
       background-color: var(--clr-desaturated-dark-blue);
     }
-    
+
     &[value] {
       border-radius: 3em;
       position: relative;
@@ -85,7 +104,7 @@ header {
         border-radius: 3em;
         position: absolute;
         bottom: 2px;
-        left: calc(81.5% - 12px)
+        left: calc(81.5% - 12px);
       }
     }
 
@@ -116,31 +135,21 @@ header {
 
   .storage-left {
     background-color: white;
-    width: max-content;
+    width: 164px;
     padding: 0.8em 1.5em;
     gap: 0.5em;
     border-radius: 0.8em;
     font-weight: 700;
     color: var(--clr-grayish-blue);
     position: absolute;
-    left: 80px;
-    bottom: -32px;
+    bottom: -30px;
+    left: calc(50% - 82px);
 
     span {
       font-size: 2.5em;
       font-weight: 700;
       color: black;
     }
-  }
-}
-
-.flex {
-  display: flex;
-  align-items: center;
-
-  &-col {
-    flex-direction: column;
-    justify-content: center;
   }
 }
 
@@ -156,8 +165,42 @@ header {
   color: hotpink;
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 760px) {
   body {
-    background: bottom / contain url("./images/bg-desktop.png") no-repeat;
+    background: left bottom / contain url("./images/bg-desktop.png") no-repeat
+      var(--clr-very-dark-blue);
+  }
+
+  .container {
+    display: flex;
+    gap: 1em;
+
+    header {
+      min-width: max-content;
+      flex-grow: 1;
+    }
+
+    .storage-summary {
+      flex-grow: 2;
+      align-self: flex-end;
+      text-align: left;
+      padding: 2.5em;
+    }
+
+    .storage-left {
+      left: calc(100% - 164px - 2.5em);
+      bottom: 120px;
+      border-bottom-right-radius: 0;
+
+      &::after {
+        content: "";
+        background-color: white;
+        position: absolute;
+        bottom: -20px;
+        right: 0;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid var(--clr-dark-blue);
+      }
+    }
   }
 }

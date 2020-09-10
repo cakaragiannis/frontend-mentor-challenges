@@ -18,22 +18,50 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 14px;
   height: 100vh;
-  background: center/contain url("./images/bg-mobile.png") no-repeat;
+  background: center/cover url("./images/bg-mobile.png") no-repeat;
   margin: 0 auto;
   overflow: hidden;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.spacer {
+  height: 40px;
+}
+
+.container {
+  min-width: 325px;
+  width: 80%;
+  max-width: 900px;
 }
 
 header,
 .storage-summary {
   background-color: var(--clr-dark-blue);
-  width: 80%;
   min-width: 325px;
-  margin: 0.5em;
+  margin: 1.2em 0;
 }
 
 header {
   border-radius: 0.8em 8em 0.8em 0.8em;
-  padding: 2.5em 3em;
+  padding: 3em;
 }
 
 header .logo {
@@ -112,42 +140,21 @@ header button {
 
 .storage-summary .storage-left {
   background-color: white;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  width: 164px;
   padding: 0.8em 1.5em;
   gap: 0.5em;
   border-radius: 0.8em;
   font-weight: 700;
   color: var(--clr-grayish-blue);
   position: absolute;
-  left: 80px;
-  bottom: -32px;
+  bottom: -30px;
+  left: calc(50% - 82px);
 }
 
 .storage-summary .storage-left span {
   font-size: 2.5em;
   font-weight: 700;
   color: black;
-}
-
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.flex-col {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .attribution {
@@ -163,9 +170,46 @@ header button {
   color: hotpink;
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 760px) {
   body {
-    background: bottom/contain url("./images/bg-desktop.png") no-repeat;
+    background: left bottom/contain url("./images/bg-desktop.png") no-repeat var(--clr-very-dark-blue);
+  }
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1em;
+  }
+  .container header {
+    min-width: -webkit-max-content;
+    min-width: -moz-max-content;
+    min-width: max-content;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .container .storage-summary {
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    text-align: left;
+    padding: 2.5em;
+  }
+  .container .storage-left {
+    left: calc(100% - 164px - 2.5em);
+    bottom: 120px;
+    border-bottom-right-radius: 0;
+  }
+  .container .storage-left::after {
+    content: "";
+    background-color: white;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid var(--clr-dark-blue);
   }
 }
 /*# sourceMappingURL=style.css.map */
