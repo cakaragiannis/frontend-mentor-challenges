@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -12,8 +14,102 @@
 }
 
 body {
-  font-family: 'Spartan', sans-serif;
+  font-family: "Spartan", sans-serif;
   font-size: 15px;
+  letter-spacing: -0.02rem;
+  line-height: 1.5em;
   margin: 0;
+  background: left top/contain url("./images/bg-pattern-top-mobile.svg") no-repeat, left bottom/contain url("./images/bg-pattern-bottom-mobile.svg") no-repeat;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-page {
+  width: 80%;
+  min-width: 325px;
+  margin: 0 auto;
+}
+
+.container-review-section {
+  margin: 4em 0;
+}
+
+header {
+  text-align: center;
+  color: var(--clr-very-dark-magenta);
+  margin: 3em 0;
+}
+
+header h1 {
+  font-weight: 700;
+  margin: 2.7em 0 1.1em 0;
+  line-height: 1em;
+}
+
+header p {
+  opacity: 0.9;
+}
+
+.star-accolades {
+  background-color: var(--clr-light-grayish-magenta);
+  border-radius: 0.6em;
+  font-weight: 700;
+  text-align: center;
+  margin: 1em 0;
+  padding: 1em;
+}
+
+.star-accolades .stars {
+  margin: 0.5em 0.2em;
+}
+
+.star-accolades span {
+  color: var(--clr-very-dark-magenta);
+}
+
+.user-review-cards {
+  background-color: var(--clr-very-dark-magenta);
+  border-radius: 0.6em;
+  padding: 2.5em 2em;
+  margin: 1em 0;
+}
+
+.user-review-cards img {
+  border-radius: 50%;
+  width: 2.5em;
+  margin-right: 1.5em;
+}
+
+.user-review-cards strong, .user-review-cards p {
+  color: white;
+  font-size: 0.84rem;
+}
+
+.user-review-cards span {
+  color: var(--clr-soft-pink);
+  font-size: 0.84rem;
+}
+
+.user-review-cards p {
+  font-weight: 500;
+  margin: 1.5em 0 0;
+  opacity: 0.9;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 1em 0;
+}
+
+.attribution a {
+  color: #3e52a3;
 }
 /*# sourceMappingURL=style.css.map */
