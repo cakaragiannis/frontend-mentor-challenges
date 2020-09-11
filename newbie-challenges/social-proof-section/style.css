@@ -95,7 +95,6 @@ header p {
 .user-review-cards span {
   color: var(--clr-soft-pink);
   font-size: 0.84rem;
-  font-weight: 500;
 }
 
 .user-review-cards p {
