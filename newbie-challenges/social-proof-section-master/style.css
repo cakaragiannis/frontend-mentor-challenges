@@ -74,7 +74,7 @@ header {
   color: white;
 }
 
-.review-content header {
+.review-content .meta {
   display: inline-flex;
   align-items: center;
 }
