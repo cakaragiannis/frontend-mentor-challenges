@@ -85,7 +85,7 @@ header {
   margin-right: 1.5em;
 }
 
-.review-content figcaption {
+.review-content span {
   line-height: 1.5em;
   color: hsl(333, 80%, 67%);
 }
