@@ -114,7 +114,7 @@ header {
   color: hsl(228, 45%, 44%);
 }
 
-@media only screen and (min-width: 860px) {
+@media only screen and (min-width: 870px) {
   body {
     padding-top: 3em;
   }
@@ -169,16 +169,17 @@ header {
 
   .reviews {
     margin: 1em 0 4em;
-    gap: 2em;
     height: 300px;
   }
 
   .review-content:first-child {
     align-self: flex-start;
+    margin-right: 1em;
   }
 
   .review-content:last-child {
     align-self: flex-end;
+    margin-left: 1em;
   }
 }
 
