@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+  margin: 0;
+  background:
+    top url("./images/bg-pattern-top-mobile.svg") no-repeat,
+    bottom url("./images/bg-pattern-bottom-mobile.svg") no-repeat
+  ;
+}
+
+h1 {
+  line-height: 1.1em;
+  color: hsl(300, 43%, 22%);
+}
+
+p {
+  letter-spacing: -0.02rem;
+  line-height: 1.5rem;
+}
+
+.page-contents {
+  width: 80%;
+  min-width: 325px;
+  margin: 0 auto;
+  max-width: 1100px;
+  margin-top: 5.5em;
+}
+
+header {
+  text-align: center;
+}
+
+.ratings {
+  list-style: none;
+  margin: 3em 0;
+  padding: 0;
+}
+
+.rating {
+  text-align: center;
+  background-color: hsl(300, 24%, 96%);
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 0.6em;
+}
+
+.rating strong {
+  font-size: small;
+  display: block;
+  color: hsl(300, 43%, 22%);
+  margin-top: 0.8em;
+}
+
+.rating img {
+  margin: 0 0.15em;
+}
+
+.review-content {
+  font-size: small;
+  background-color: hsl(300, 43%, 22%);
+  margin: 1em 0;
+  padding: 2.5em;
+  border-radius: 0.6em;
+  color: white;
+}
+
+.review-content header {
+  display: inline-flex;
+  align-items: center;
+}
+
+.review-content img {
+  border-radius: 3em;
+  width: 3em;
+  margin-right: 1.5em;
+}
+
+.review-content figcaption {
+  line-height: 1.5em;
+  color: hsl(333, 80%, 67%);
+}
+
+.review-content cite {
+  font-weight: 700;
+  font-style: normal;
+  color:white;
+}
+
+.review-content blockquote {
+  font-weight: 500;
+  letter-spacing: -0.02rem;
+  line-height: 1.5rem;
+  margin: 1.5em 0 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 3em 0 1em;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
